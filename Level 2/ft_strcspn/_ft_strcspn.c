@@ -17,7 +17,7 @@ size_t	ft_strcspn(const char *s, const char *reject)
 		}
 		i++;
 	}
-	return (0);
+	return (i);
 }
 
 int	main(void)
