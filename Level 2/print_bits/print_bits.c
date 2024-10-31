@@ -13,7 +13,7 @@ void print_bits(unsigned char octet)
 }
 int	main(void)
 {
-	unsigned char value = 2;
+	unsigned char value = 3;
 	print_bits(value);
 	return (0);
 }
