@@ -18,10 +18,10 @@ int main(int argc, char **argv)
     if (argc > 1)
     {
         str = argv[1];
-        while (*str == ' ' || *str == '\t') 
+        while (*str == ' ' || *str == '\t')
             str++;
         first_word_start = str;
-        while (*str && *str != ' ' && *str != '\t')
+        while (*str != ' ' && *str != '\t')
             str++;
         first_word_end = str;
         while (*str == ' ' || *str == '\t')
@@ -35,8 +35,8 @@ int main(int argc, char **argv)
                         str++;
                     if (*str)
                         write(1, " ", 1);
-                } 
-                else 
+                }
+                else
                 {
                     write(1, str, 1);
                     str++;
