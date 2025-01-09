@@ -1,15 +1,14 @@
 #include <stdio.h>
-
-char to_lower(char c)
+char	to_lower(char c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return (c + ('a' - 'A'));
+		return (c + 32);
 	return (c);
 }
 
-int get_digit(char c, int digits_in_base)
+int	get_digit(char c, int digits_in_base)
 {
-	int max_digit;
+	int	max_digit;
 
 	if (digits_in_base <= 10)
 		max_digit = digits_in_base - 1 + '0';
@@ -24,19 +23,19 @@ int get_digit(char c, int digits_in_base)
 		return (-1);
 }
 
-int ft_atoi_base(const char *str, int str_base)
+int	ft_atoi_base(const char *str, int str_base)
 {
 	int result = 0;
 	int sign = 1;
-	int digit;
+	int	digit;
 
 	if (str == NULL || str_base < 2 || str_base > 16)
-		return 0;
+		return (0);
 
 	if (*str == '-')
 	{
 		sign = -1;
-		++str;
+		str++;
 	}
 
 	while (*str)
@@ -45,13 +44,14 @@ int ft_atoi_base(const char *str, int str_base)
 		if (digit == -1)
 			break;
 		result = result * str_base + digit;
-		++str;
+		str++;
 	}
 	return (result * sign);
 }
 
+
 int	main(void)
 {
-	printf("%d\n", ft_atoi_base("2e", 16));
+	printf("%d\n", ft_atoi_base("-2e", 16));
 	return (0);
 }

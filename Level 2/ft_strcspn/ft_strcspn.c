@@ -18,3 +18,10 @@ size_t  ft_strcspn(const char *s, const char *reject)
     }
     return (i);
 }
+
+int	main(void)
+{
+	printf("%zu\n", ft_strcspn("hola que", "qe"));
+
+	return (0);
+}

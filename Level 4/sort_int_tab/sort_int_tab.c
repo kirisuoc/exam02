@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 void	sort_int_tab(int *tab, unsigned int size)
 {
 	unsigned int	i = 0;
@@ -15,4 +17,15 @@ void	sort_int_tab(int *tab, unsigned int size)
 		else
 			i++;
 	}
+}
+
+int	main(void)
+{
+	int	tab[] = {2, 6, 7, 0};
+	for (int i = 0; i < 4; i++)
+		printf("%d\n", tab[i]);
+	sort_int_tab(tab, 4);
+	for (int i = 0; i < 4; i++)
+		printf("%d\n", tab[i]);
+	return (0);
 }
